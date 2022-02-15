@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="hu-HU">
+    <head>
+        <title>13ESZ Csoportprojekt</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="2021 13ESZ 1 csoport">
+        <meta name="description" content="Csoport Munka 22.02.15">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <style>
+            body{
+              background-image: url(pic/code.jpeg);
+            }
+        </style>
+    </head>
+    <body id="body">
+        <div class="container text-white navbar-expand-sm bg-dark pt-2 navbar-dark my-pb-3">
+            <a href="index.html" class="navbar-brand">Verebelyszky 13ESz GMBH.</a>
+                <button class="navbar-toggler my-f-r" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="IT.html" class="nav-link">IT ismeretek</a></li>
+                    <li class="nav-item">
+                    <li class="nav-item"><a href="HT.html" class="nav-link">HTML-CSS ismeretek</a></li>
+                    <li class="nav-item">
+                    <li class="nav-item"><a href="PY.html" class="nav-link">Pyhton ismeretek</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container p-5 border bg-mybg">
+            <h1 class="text-center pb-4">Python</h1>
+            <p class="my-text-justif">A Python egy általános célú, nagyon magas szintű programozási nyelv, melyet Guido van Rossum holland programozó kezdett el fejleszteni 1989 végén, majd hozott nyilvánosságra 1991-ben.[4] A nyelv tervezési filozófiája az olvashatóságot és a programozói munka megkönnyítését helyezi előtérbe a futási sebességgel szemben.</p>
+            <p class="my-text-justif">A Python többek között a funkcionális, az objektumorientált, az imperatív és a procedurális programozási paradigmákat támogatja. Dinamikus típusokat és automatikus memóriakezelést használ, ilyen szempontból hasonlít a Scheme, Perl és Ruby nyelvekhez, emellett szigorú típusrendszerrel rendelkezik.</p>
+            <p class="my-text-justif">A Python úgynevezett interpreteres nyelv, ami azt jelenti, hogy nincs különválasztva a forrás- és tárgykód, a megírt program máris futtatható, ha rendelkezünk a Python értelmezővel. A Python értelmezőt számos géptípusra és operációs rendszerre elkészítették, továbbá számtalan kiegészítő könyvtár készült hozzá, így rendkívül széles körben használhatóvá vált.</p>
+            <h2>Programtételek</h2>
+            <p>
+                sorozat = [ 26, 11, 23, 7, 69, 4, 15 ], <br> 
+                print ( f'sorozat elemei: { sorozat } ' )
+            </p>
+            <h5>Összegszámítás: sorozat elemeinek összege</h5> <br>
+            <p>
+                sum = 0    &#60;-változó <br>
+                For elem in sorozat <br>
+                &emsp;összeg += elem <br>
+                print ( f'sorozat elemeinek összege: { sum } ' )
+            </p>
+            <h5>Átlagszámtás: sorozat elemeinek átlaga</h5> <br> 
+            <p>
+                (szükség van hozzá a sorozat elemeinek összegére) <br>
+                print ( f'sorozat elemeinek átlaga: { sum / len ( sorozat ) } ' ) 
+            </p>
+            <br>
+            <h5>Sorozatszámítás: sorozat elemeinek szorzata</h5> <br> 
+            <p>
+                multi = 1 &#60;-változó <br>
+                For elem in sorozat <br>
+                &emsp;multi *= elem <br>
+                print ( f'sorozat elemeinek szorzata: { multi } ' )
+            </p>
+            <h5>Megszámlálás: adott tulajdonságú elemek megszámlálása a sorozatban </h5> <br>    
+            <p>
+                szam = 0 <br>
+                #tulajdonság: páros <br>
+                For elem in sorozat  <br>
+                &emsp;ha elem % 2 == 0 : &#60;- maradékos osztás <br>
+                &emsp;szám += 1 <br>
+                print ( f'páros elemek száma a sorozatban: { szam } db' )
+            </p>
+            <h5>Szélsőérték meghatározott tétele: maximum meghatározás</h5> <br>   
+            <p>
+                max_index = 0 <br>
+                tartományban lévő indexhez ( 1, len ( sorozat ) ): <br> 
+                &emsp;if sorozat [ index ] > sorozat [ max_index ]: <br>
+                &emsp;&emsp;max_index = index <br>
+                print ( f'a sorozat legnagyobb elemének indexe: { max_index } ' ) <br>
+                print ( f'a sorozat legnagyobb eleme: { sorozat [ max_index ] } ' ) <br>
+                A minimum értéket ugyan ezzel a módszerrel lehet meghatározni, a reláció megfordításával.
+            </p>
+            <h5>Kiválasztás:  CSAK AKKOR alkalmas, HA BIZTOSAN TUDHATÓ, hogy az elem BENNE VAN az adatszerkezetben</h5> <br>   
+            <p>
+                i = 0 <br>
+                keresett_elem = 69 <br> 
+                while sorozat [ i ] != keresett_elem : <br>
+                &emsp;i += 1 <br>
+                print ( f'a { keresett_elem } indexe a(z) { i }.' )
+            </p>
+            <h5>Eldöntés:  van-e adott tulajdonságoknak megfelelő elem a sorozatban</h5> <br>    
+            <p>
+                pl.: van-e a sorozatban páros szám: <br> 
+                i = 0 <br>
+                a teljesülési feltétel ellentetjét kell megadni <br>
+                while i &#60; len ( sorozat ) and sorozat [ i ] % 2 != 0 : <br>
+                &emsp;i += 1  <br>
+                megfelel = i &#60; len ( sorozat ) <br>
+                if megfelel : print ( 'van benne páros elem' ) <br>
+                else : print ( 'nincs benne páros elem' )
+            </p>
+            <h5>Lineáris keresés:</h5> <br>    
+            <p>
+                i = 0 <br>
+                a teljesülési feltétel tagadása <br>
+                while i &#60; len ( sorozat ) and not ( sorozat [ i ] != 3 and sorozat [ i ] % 3 == 0 ): <br>
+                &emsp;i += 1 <br>
+                if i &#60; len ( sorozat ): <br>
+                &emsp;print ( f'van benne 3 többszöröse, ez pedig a { sorozat [ i ] }, ami a sorozat { i } indexű eleme.' ) <br>
+                else : print ( 'nincs a sorozatban olyan szám, ami 3 többszöröse' )
+            </p>
+            <h5>While ciklus</h5>  
+            <p>
+                b = 0<br>
+                while (b &#60; 9): <br>
+                &emsp;b = b + 1 <br>
+                print (b) <br>
+                While (b &#60; 9): a ciklus mind addig végrehajtódik míg b értéke kisebb mint 9, tehát amíg igaz a kifejezés. (1-től 9-ig kiírja a számokat a ciklus). <br>
+                A másik sor: b = b + 1,  Az egyenlőség jelet a programozásban mindig értékadásra használjuk, nem egyenlőség ként működik (==). 
+                b legyen egyenlő b+1 értékkel, leegyszerűsítve b értékét növeljük eggyel. <br>
+                Amire nagyon vigyáznunk kell, soha ne írjunk végtelen ciklust. A while ciklusban megadott feltétel idővel váltson hamisra! 
+                Pl.: ha az alap programban nem növeljük a b értékét, akkor a while feltétele örökre igaz marad. 
+            </p>
+            <h5>For ciklus</h5>   
+            <p>
+                Legtöbbször számláló ciklusként lehet jellemezni (pythonban léptető ciklus). Működése általánosan a kifejezésben megadott értékek határozzák meg, hogy hányszor fusson le a ciklus. <br>
+                for i in range(10):<br> 
+                &emsp;print(i) <br>
+                Első sor: létrehozunk egy egész típusú változót(i) aminek a for ciklus segítségével 
+                a range(szám sorozat)-ban eltárolt számig, egyesével értéket adunk. 
+                A range(10) jelentése az i egymás után 10 értéket fog kapni 0-9-ig, 10-szer hajtódik 
+                végre a for ciklus. A range-ba több értéket is megadhatunk, ezek megváltoztatják a számsor feldolgozását.<br> 
+                for i in range(6,10): <br>
+                &emsp;print(i) <br>
+                Range(6,10) – a számsor most is 10-ig (utolsó elem a 9) megy, de a 6-ostól írja ki a számokat. <br>
+                for i in range(0,41,4): <br>
+                &emsp;print(i) <br>
+                Itt a range arra utasít, hogy 0-tól 41-ig írjuk ki a számokat 4-esével. 
+                A harmadik érték a lépésközöket adja. <br>
+                Ugyanígy csökkenő számsort is létrehozhatunk: <br>
+                for i in range(32,-17,-4): <br>
+                &emsp;print(i) <br>
+                Itt 32-től -17-ig lépked -4-esével(lépésenként 4-et kivonva). <br>
+                A for ciklusok is egymásba ágyazhatók többszörösen. 
+                Ami nem szerencsés velük kapcsolatban a cikluson belül a számláló értékének változtatása, ez ugyan is összezavarhatja a ciklus futását. 
+            </p> 
+        </div>
+        <a href="#body" class="back bg-dark" title="Az oldal tetejére">^</a> 
+        <div class="container text-white-50 p-5 bg-dark">
+            <blockquote>
+                "Jó osztálytárs nem csak ígér, be is tart."<br>- By: Gajdi
+            </blockquote>
+        </div>
+    </body>
+</html>

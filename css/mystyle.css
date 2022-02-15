@@ -1,0 +1,86 @@
+body{
+  background-color: black;
+  opacity:200%;
+}
+.bg-mybg{
+  background-color:lightgray;
+}
+.my-text-justif{
+    text-align: justify;
+}
+blockquote{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+.my-list-group-line{  
+  list-style-type: disc;
+}
+.my-list-group-decimal{  
+  list-style-type: decimal;
+}
+.my-list-group-none{  
+  list-style-type: none;
+}
+.my-a a{
+  text-decoration: none;
+  color: #000000;
+}
+.my-a a:hover{
+  text-decoration: underline;
+  color: #145db1;
+}
+.my-f-r{
+  float: right;
+}
+.my-br-s{
+  display: none;
+}
+.my-pb-3{
+  padding-bottom: 0rem;
+}
+.my-width-50{
+  width: 50%;
+}
+.my-width-100{
+  width: 100%;
+}
+@media screen and (max-width: 991px) and (min-width: 768px) {
+  .my-br-s{
+    display: inherit;
+  }
+}
+@media screen and (max-width: 531px) {
+  .my-br-s{
+    display: inherit;
+  }
+}
+@media screen and (max-width: 575px) {
+  .my-pb-3{
+    padding-bottom: 1rem;
+  }
+}
+.back {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 99; 
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px; 
+  text-decoration: none;
+}
+.back:hover{
+  color: #7a7a7a;
+  font-weight: bold;
+}
+.i_table, .i_table th, .i_table td {
+border: solid 2px darkblue;
+font-size: large;
+font-family: Arial, Helvetica, sans-serif;
+background-color: lavenderblush;
+}
+
